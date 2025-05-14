@@ -1,15 +1,15 @@
 const projects = [
   {
-    title: "Weather App",
-    description: "A simple weather app using OpenWeatherMap API.",
-    demoLink: "https://yourdemo1.com",
-    codeLink: "https://github.com/yourusername/weather-app"
+    title: "Factory",
+    description: "Spigot Factory plugin with various Machine Types!",
+    demoLink: "factory.html", // link to local HTML page
+    codeLink: "https://github.com/yourusername/spigot-factory"
   },
   {
-    title: "Todo List",
-    description: "A basic todo app with local storage support.",
-    demoLink: "https://yourdemo2.com",
-    codeLink: "https://github.com/yourusername/todo-app"
+    title: "Nazra Quest",
+    description: "A Complete Spigot MMORPG plugin with various items, classes, skills, and quests.",
+    demoLink: "nazraquest.html",
+    codeLink: "https://github.com/Graymont/Nazra-Quest"
   }
 ];
 
@@ -21,8 +21,10 @@ projects.forEach((project) => {
   card.innerHTML = `
     <h3>${project.title}</h3>
     <p>${project.description}</p>
-    <a href="${project.demoLink}" target="_blank">Live Demo</a> |
-    <a href="${project.codeLink}" target="_blank">Source Code</a>
+    <div class="project-links">
+      <a href="${project.demoLink}" target="_blank" class="button demo">Live Demo</a>
+      <a href="${project.codeLink}" target="_blank" class="button code">Source Code</a>
+    </div>
   `;
   container.appendChild(card);
 });
